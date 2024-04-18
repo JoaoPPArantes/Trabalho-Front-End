@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Catálogo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--  icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body class="body ">
+    <nav class="menu background-preto margem-interna">
+      <div class="logo-container">
+        <img src="./imagem/topo.png" alt="Logo Discomania" class="logo-img  ">
+      <div class="jacquard-24-regular titulo centro">Discomania</div>
+    </nav>
+
+    <section class="container">
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          background-image: url("./imagem/fundo.webp");
+          background-size: cover;
+          background-position: center;
+          font-family: Arial, sans-serif;
+        }
+      </style>
+      <h3 class="jacquard-24-regular subtitulo margem-interna">Catálogo</h3>
+
+      <div class="centro margem-interna quebra-l">
+        <label
+          for="banda"
+          class="jacquard-24-regular label-input background-preto"
+        >
+          Banda:
+        </label>
+        <input type="text" id="banda" name="banda" class="caixa-texto" />
+
+        <label
+          for="album"
+          class="jacquard-24-regular label-input background-preto"
+        >
+          Album :
+        </label>
+        <input type="text" id="album" name="album" class="caixa-texto" />
+
+        <label
+          for="valor"
+          class="jacquard-24-regular label-input background-preto"
+        >
+          Valor :
+        </label>
+        <input type="number" id="valor" name="valor" class="caixa-texto" />
+
+        <button
+          type="button"
+          class="jacquard-24-regular background-preto btn"
+          onclick="salvar()"
+        >
+          Adicionar
+        </button>
+      </div>
+
+      <div class="margem-interna">
+        <table class="centro tabela jacquard-tabela item-adicionado">
+          <thead>
+            <tr>
+              <th>Bandas</th>
+              <th>Álbuns</th>
+              <th>Valores</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+          <tfoot id="table-footer"></tfoot>
+        </table>
+      </div>
+    </section>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
